@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./Puppertino/index.css">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mac Window Tauri</title>
+  <script type="module" src="/main.js" defer></script>
+</head>
+
+<body class="blurer-container">
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Title Bar -->
+    <div class="title-bar" data-tauri-drag-region>
+      <div class="btns">
+        <button class="btn-rounded btn-red close"></button>
+        <button class="btn-rounded btn-yellow minimize"></button>
+        <button class="btn-rounded btn-green maximize"></button>
+        <button class="p-btn left-arrow p-btn-disabled " id="returnDir">
+          <img src="./assets/left-arrow.png" alt="">
+        </button>
+
+      </div>
+      <div class="title-center">
+        <h1 id="title" data-tauri-drag-region>title</h1>
+      </div>
+    </div>
+    <!-- Title Bar -->
+
+    <!-- Open Folder -->
+    <div class="container">
+      <div class="open-file ">
+        <button class="p-btn p-prim-col mx-auto" id="openFileBtn">Open Folder</button>
+
+      </div>
+    </div>
+    <!-- Open Folder -->
+
+    <!-- Explorer  -->
+    <div class="explorer hide">
+      <button class="p-btn p-prim-col " id="openNewFileBtn">Open New Folder</button>
+
+      <div class="browsing">
+
+      </div>
+    </div>
+    <!-- Explorer  -->
+
+    <!-- Alert When Not Opnening Any Folder  -->
+    <a id="informMe" class="p-btn hide" data-p-open-modal="#alert-warning">Default</a>
+
+    <div class="p-modal-background">
+
+      <!-- Your modals will be here -->
+      <div class="p-modal" id="alert-warning">
+        <h2 style="color:black;">Select Folder!</h2>
+        <p style="color:black;">You Must Select One Folder</p>
+        <div class="p-modal-button-container">
+          <a href="" data-p-cancel>OK</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alert When Not Opnening Any Folder  -->
+
+
+
+  </main>
+  <!-- Main Content -->
+
+ <!-- Puppertino Css Mac Os Framework  -->
+  <script src="./Puppertino/src/js/modals.js"></script>
+  <!-- Puppertino Css Mac Os Framework  -->
+
+</body>
+
+</html>
